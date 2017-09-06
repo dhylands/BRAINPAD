@@ -1,6 +1,6 @@
-This is a MicroPython board definition file for the BrainPad2 from GHI Electronics.
+This is a MicroPython board definition file for the BrainPad from GHI Electronics.
 
-The product page for the BrainPad2 can be found here: http://docs.ghielectronics.com/hardware/products/brainpad.html
+The product page for the BrainPad can be found here: http://docs.ghielectronics.com/hardware/products/brainpad.html
 
 Build the firmware using:
 ```
