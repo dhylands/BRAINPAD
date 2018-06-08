@@ -2,6 +2,7 @@
 #define MICROPY_HW_MCU_NAME         "STM32F401RE"
 #define MICROPY_PY_SYS_PLATFORM     "pyboard"
 
+#define MICROPY_HW_ENABLE_USB       (1)
 #define MICROPY_HW_HAS_SWITCH       (1)
 #define MICROPY_HW_HAS_FLASH        (1)
 #define MICROPY_HW_HAS_SDCARD       (0)
@@ -27,13 +28,13 @@
 #define MICROPY_HW_RTC_USE_CALOUT   (0)
 
 // UART config
-#define MICROPY_HW_UART1_PORT (GPIOA)
-#define MICROPY_HW_UART1_PINS (GPIO_PIN_9 | GPIO_PIN_10)
+#define MICROPY_HW_UART1_TX	(pin_A9)
+#define MICROPY_HW_UART1_RX	(pin_A10)
 
-#define MICROPY_HW_UART2_PORT (GPIOA)
-#define MICROPY_HW_UART2_PINS (GPIO_PIN_2 | GPIO_PIN_3)
-#define MICROPY_HW_UART2_RTS  (GPIO_PIN_1) // doesn't seem to be accessible on BrainPad
-#define MICROPY_HW_UART2_CTS  (GPIO_PIN_0)
+#define MICROPY_HW_UART2_TX     (pin_A2)
+#define MICROPY_HW_UART2_RX     (pin_A3)
+#define MICROPY_HW_UART2_RTS  	(pin_A1) // doesn't seem to be accessible on BrainPad
+#define MICROPY_HW_UART2_CTS  	(pin_A0)
 
 // I2C busses
 #define MICROPY_HW_I2C1_SCL (pin_B6)
@@ -72,5 +73,6 @@
 #define MICROPY_HW_USRSW_PRESSED    (0)
 
 // USB config
+#define MICROPY_HW_USB_FS              (1)
 //#define MICROPY_HW_USB_VBUS_DETECT_PIN (pin_A9)
 //#define MICROPY_HW_USB_OTG_ID_PIN      (pin_A10)
